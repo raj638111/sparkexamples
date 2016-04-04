@@ -33,7 +33,16 @@ mapred-site.xml (Example)
         <name>mapreduce.framework.name</name>
         <value>yarn</value>
     </property>
-    
+
+hadoop-env.sh
+------------------------------
+
+#  This value is used to define JAVA_HOME in remtote nodes also  
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+https://cloudcelebrity.wordpress.com/2014/01/31/yarn-job-problem-application-application_-failed-1-times-due-to-am-container-for-xx-exited-with-exitcode-127/
+http://glebche.appspot.com/static/hadoop-ecosystem/hadoop-hive-tutorial.html
+
 Starting & Stopping
 ------------------------------
    

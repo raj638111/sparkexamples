@@ -1,0 +1,11 @@
+
+
+.bash_profile
+---------------------------------------------
+
+   export HADOOP_HOME=/Users/raj/hp
+   export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+      #  HADOOP_CONF_DIR used by spark to access Hadoop related configuration files
+      #  while connecting to YARN
+      
+      
