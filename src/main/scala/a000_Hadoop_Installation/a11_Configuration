@@ -1,0 +1,53 @@
+
+General
+------------------------------
+   
+   http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html
+   
+   
+core-site.xml (Example)
+------------------------------
+   
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+    </property>
+
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/Users/raj/workingdir/hadoop/pseudomode/hadoop.tmp.dir</value>
+    </property>
+    
+yarn-site.xml (Example)
+------------------------------
+
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce_shuffle</value>
+    </property>
+    
+mapred-site.xml (Example)
+------------------------------
+
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+    
+Starting & Stopping
+------------------------------
+   
+   sbin/start-dfs.sh
+   sbin/start-yarn.sh
+
+
+
+
+
+
+    
+
+    
+    
+    
+   
