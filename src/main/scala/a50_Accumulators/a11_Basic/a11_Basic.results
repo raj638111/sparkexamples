@@ -1,0 +1,18 @@
+
+-- In YARN
+
+/sk/bin/spark-submit --class a.a020_Accumulator.a020_Accumulator --master yarn --deploy-mode client target/scala-2.10/sparkexamples_2.10-1.0.jar
+Inside driver
+2016-04-05 19:13:47.666 java[94007:3044965] Unable to load realm info from SCDynamicStore
+16/04/05 19:13:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+No of partitions -> 3
+myAccum -> 120
+
+-- In Local Mode
+
+/sk/bin/spark-submit --class a.a020_Accumulator.a020_Accumulator --deploy-mode client target/scala-2.10/sparkexamples_2.10-1.0.jar
+Inside driver
+2016-04-05 19:16:19.928 java[94285:3050512] Unable to load realm info from SCDynamicStore
+16/04/05 19:16:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+No of partitions -> 3
+myAccum -> 120

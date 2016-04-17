@@ -3,7 +3,7 @@
 Connecting to YARN in Client mode
 --------------------------------------------------------
 
-   [raj@Rajkumars-MacBook-Pro ~]$sk/bin/spark-shell --master yarn --deploy-mode client
+   sk/bin/spark-shell --master yarn --deploy-mode client
    2016-04-04 11:46:01.768 java[68496:2257685] Unable to load realm info from SCDynamicStore
    16/04/04 11:46:01 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
    16/04/04 11:46:01 INFO spark.SecurityManager: Changing view acls to: raj

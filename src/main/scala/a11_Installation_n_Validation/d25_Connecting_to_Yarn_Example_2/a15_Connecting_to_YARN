@@ -1,0 +1,8 @@
+
+
+Connecting to YARN in Client mode
+--------------------------------------------------------
+
+   sk/bin/spark-shell --master yarn --deploy-mode client --num-executors 4 --executor-memory 3  
+
+   

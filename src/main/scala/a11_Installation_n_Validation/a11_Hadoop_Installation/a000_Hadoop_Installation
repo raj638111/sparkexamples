@@ -1,0 +1,100 @@
+
+General
+------------------------------
+   
+   http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html
+   
+   
+core-site.xml (Example)
+------------------------------
+   
+    <property>
+        <name>fs.defaultFS</name>
+        <value>hdfs://localhost:9000</value>
+    </property>
+
+    <property>
+        <name>hadoop.tmp.dir</name>
+        <value>/Users/raj/workingdir/hadoop/pseudomode/hadoop.tmp.dir</value>
+    </property>
+    
+yarn-site.xml (Example)
+------------------------------
+
+   #  yarn.nodemanager.aux-services 
+      +  <mapreduce_shuffle>
+      
+   #  yarn.nodemanager.resource.cpu-vcores
+      +  <20>
+      +  [8]
+      +  No of cores for a Node manager
+         Imaginary no of cores assigned for this node
+         Recommended to set to the no of cores in the machine
+      +  http://hortonworks.com/blog/managing-cpu-resources-in-your-hadoop-yarn-clusters/
+      
+   #  yarn.nodemanager.resource.memory-mb
+      +  <>
+      +  [8192]
+      +  Defines total available resources on the NodeManager to be made available to running containers
+      +  https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-common/ClusterSetup.html
+            
+                 
+   #  yarn.scheduler.minimum-allocation-vcores
+      +  <>
+      +  [1]
+      +  The minimum allocation for every container request at the RM, in terms of virtual CPU cores.
+         Requests lower than this won't take effect, and the specified value will get allocated the minimum.
+      +  http://jason4zhu.blogspot.com/2014/10/vcore-configuration-in-hadoop.html     
+
+   #  yarn.scheduler.maximum-allocation-vcores
+      +  <>
+      +  [32]        
+      +  The maximum allocation for every container request at the RM, 
+         in terms of virtual CPU cores. Requests higher than this won't take effect, 
+         and will get capped to this value.
+
+   #  yarn.resourcemanager.am.max-attempts
+      +  <>
+      +  [2]
+      +  The maximum number of application attempts. 
+         It's a global setting for all application masters. 
+         Each application master can specify its individual maximum number of application attempts via the API, 
+         but the individual number cannot be more than the global upper bound. 
+         If it is, the resourcemanager will override it. 
+         
+    
+mapred-site.xml (Example)
+------------------------------
+
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+
+hadoop-env.sh
+------------------------------
+
+#  This value is used to define JAVA_HOME in remtote nodes also  
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+https://cloudcelebrity.wordpress.com/2014/01/31/yarn-job-problem-application-application_-failed-1-times-due-to-am-container-for-xx-exited-with-exitcode-127/
+http://glebche.appspot.com/static/hadoop-ecosystem/hadoop-hive-tutorial.html
+
+Starting & Stopping
+------------------------------
+   
+   #  sbin/start-dfs.sh
+   #  sbin/start-yarn.sh
+   #  sbin/mr-jobhistory-daemon.sh --config $HADOOP_CONF_DIR start historyserver
+   
+
+
+
+
+
+    
+
+    
+    
+    
+   
